@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -36,7 +37,7 @@ god bless.  ^__^
 ------------------->
  
  
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+<head>
 
 <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><link rel="stylesheet" media="screen" href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css?_v=a6c4ad40cdc663ad83f8a1bbc8aeedc6"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +67,7 @@ god bless.  ^__^
  
 <link rel="shortcut icon" href="https://i.imgur.com/hYXQBg0.png">
  
-<link rel="alternate" type="application/rss+xml" href="https://sakicoding.tumblr.com/rss">
+<link rel="alternate" type="application/rss+xml">
  
 <meta name="description" content="" />
  
@@ -168,7 +169,8 @@ transition: all 0.4s ease-in-out;
 }
  
 </style>
-</head>
+<script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=a8fadfa499d8cb7c3f8eefdf0b1adfdd"></script><link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"><!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="Tumblr" /><meta property="og:title" content="Tumblr" />
+<meta property="og:url" content="https://sakicoding.tumblr.com/test" /><meta property="og:type" content="article" /><meta property="og:determiner" content="a" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;postID=" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;postID=" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:site" content="tumblr" /><meta name="twitter:card" content="summary" /><meta name="twitter:description" content="sakicoding" /><meta name="twitter:title" content="sakicoding" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;referrer=twitter-cards" /><link rel="canonical" href="https://sakicoding.tumblr.com/test" /></head>
 <body onselectstart="return false;" ondragstart="return false;">
 <script language=JavaScript>
 <!--
@@ -227,44 +229,5 @@ document.oncontextmenu=new Function("alert(message);return false")
 </div>
 </div>
 <BODY onselectstart="return false;" ondragstart="return false;">
-
-<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
-    (function(){
-        var analytics_frame = document.getElementById('ga_target');
-        var analytics_iframe_loaded;
-        var user_logged_in;
-        var blog_is_nsfw = 'No';
-
-        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-        var eventer = window[eventMethod];
-        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-        eventer(messageEvent,function(e) {
-            var message = (e.data && e.data.split) ? e.data.split(';') : '';
-            switch (message[0]) {
-                case 'analytics_iframe_loaded':
-                    analytics_iframe_loaded = true;
-                    postCSMessage();
-                    postGAMessage();
-                    break;
-                case 'user_logged_in':
-                    user_logged_in = message[1];
-                    postGAMessage();
-                    break;
-            }
-        }, false);
-
-        analytics_frame.src = "https://assets.tumblr.com/analytics.html?_v=9f5febfd57a8a649c598d888f2d9e062#" +
-                              "https://sakicoding.tumblr.com";
-        function postGAMessage() {
-            if (analytics_iframe_loaded && user_logged_in) {
-                var is_ajax = false;
-                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/test?route=custom_page'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
-            }
-        }
-        function postCSMessage() {
-            COMSCORE = true;
-            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
-        }
-    })();
-</script><script type="text/javascript" nonce="IJI1DRVdE9KjC7h9KVS9CeGmqpo">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1629441934&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL3Nha2ljb2RpbmcudHVtYmxyLmNvbS90ZXN0IiwicmVxdHlwZSI6MCwicm91dGUiOiJjdXN0b21fcGFnZSJ9&U=GDMEOCKEGF&K=48601b986bfe89e26dde1242e91125edc47c34156fc787421ac2f4d5634105c8&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1629441934&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL3Nha2ljb2RpbmcudHVtYmxyLmNvbS90ZXN0IiwicmVxdHlwZSI6MCwicm91dGUiOiJjdXN0b21fcGFnZSIsIm5vc2NyaXB0IjoxfQ==&U=GDMEOCKEGF&K=9c8371b3b2540100207a68f833c02032af3bf65554452d424ae6ceaa6fefffcb&R="></noscript><noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;c86f8a500596474a7ef5034081f694bd&quot;,&quot;inbox_unread&quot;:0},&quot;DesktopDashboardLogo&quot;:{&quot;animations&quot;:[[&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1.png?_v=161861acded461bb6e995593a3bae835&quot;,&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1@2x.png?_v=496a774637302a598c851381d00009b0&quot;]]},&quot;TumblelogIframe&quot;:{&quot;unified&quot;:true,&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=3adb836a96eddc27a1180d62826b0901&quot;,&quot;tumblelogName&quot;:&quot;sakicoding&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;a !&quot;,&quot;tumblelogAvatar&quot;:&quot;https:\/\/assets.tumblr.com\/images\/default_avatar\/octahedron_open_64.png&quot;,&quot;tumblelogAvatar128&quot;:&quot;https:\/\/assets.tumblr.com\/images\/default_avatar\/octahedron_open_128.png&quot;,&quot;tumblelogHost&quot;:&quot;https:\/\/sakicoding.tumblr.com&quot;,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:true,&quot;themeHeaderImage&quot;:&quot;https:\/\/64.media.tumblr.com\/a81c88cba9f9993dee9ce842eeeeb4f5\/b972f9b0d330f1cc-1d\/s2048x3072\/173b5db773f4cec9f0bf8cb88120a18bd5b44f87.png&quot;,&quot;themeBackgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;themeTitleColor&quot;:&quot;#000000&quot;,&quot;themeAccentColor&quot;:&quot;#00B8FF&quot;,&quot;brag&quot;:true,&quot;adsEnabled&quot;:false,&quot;canShowAd&quot;:true,&quot;isPremium&quot;:false,&quot;showLrecAds&quot;:false,&quot;showStickyLrecBackfill&quot;:false,&quot;showGeminiAds&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:null,&quot;currentPage&quot;:false,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;&quot;,&quot;src&quot;:&quot;https:\/\/sakicoding.tumblr.com\/test&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;https:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=3de94a184d600617102ddd5b48fb36e9&quot;,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dbn_continue_or_install_cta&quot;,&quot;ios&quot;:&quot;https:\/\/apps.apple.com\/app\/apple-store\/id305343404?pt=212308\u0026ct=bn_continue_or_install_cta\u0026mt=8&quot;},&quot;appOpenReferrer&quot;:&quot;bn_header_open_btn&quot;,&quot;isShowSearch&quot;:true,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:-1,&quot;installUrlOpenFailed&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dbn_header_app_open_failed&quot;,&quot;ios&quot;:&quot;https:\/\/apps.apple.com\/app\/apple-store\/id305343404?pt=212308\u0026ct=bn_header_app_open_failed\u0026mt=8&quot;},&quot;loginWallVariant&quot;:&quot;small_center&quot;}},&quot;Flags&quot;:{&quot;features&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwibW9iaWxlX3dlYl9nYXRlIjp0cnVlLCJzYWZlX21vZGUiOnRydWUsInNhZmVfbW9kZV9lbmFibGVkIjp0cnVlLCJrZXljb21tYW5kX2F1dG9fcGFnaW5hdGUiOnRydWUsImxvZ2dlZF9vdXRfc2VhcmNoIjp0cnVlLCJrcmFrZW5fd2ViX2xvZ2dpbmdfbGlicmFyeSI6dHJ1ZSwibGl2ZXBob3Rvc193ZWIiOnRydWUsInVzZXJfdGFnX2ZpbHRlcmluZyI6dHJ1ZSwic2FmZV9tb2RlX293bl9wb3N0Ijp0cnVlLCJwcm9qZWN0X3hfYXBwZWFsIjp0cnVlLCJtb2JpbGVfd2ViX3Bob3Rvc2V0cyI6dHJ1ZSwiaGlkZV9kZWZhdWx0X2hlYWRlcnNfYmxvZ19jYXJkcyI6dHJ1ZSwibm90aWZpY2F0aW9uX3JlcGx5X2xpbmtfdG9fbm90ZXMiOnRydWUsInR5cGluZ19pbmRpY2F0b3Jfd3JpdGUiOnRydWUsInR1bWJscl92aWRlb19zcG9uc29yZWRfZGF5Ijp0cnVlLCJjYXB0Y2hhOnVzZV9yZWNhcHRjaGEyIjp0cnVlLCJsaXR0bGVfc2lzdGVyIjp0cnVlLCJsb2dfbGFkeSI6dHJ1ZSwicmVkcG9wX3Bvc3RfZm9ybV9tb2JpbGVfY3JlYXRlIjp0cnVlLCJsZWdhY3lfcG9zdF9mb3JtX2J1dHRvbnNfbGlua190b19yZWRwb3AiOnRydWUsImRhcmxhX2FkX2ZlZWRiYWNrIjp0cnVlLCJzdGF0dXNfaW5kaWNhdG9yIjp0cnVlLCJjb252ZXJzYXRpb25hbF9ub3RpZmljYXRpb25zIjp0cnVlLCJkaXNhYmxlX3lhaG9vX2JfY29va2llIjp0cnVlLCJsaXZlcGhvdG9zIjp0cnVlfQ==&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1629441934000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;https:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;https:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;,&quot;assets&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;}}"></noscript><script src="https://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=3adb836a96eddc27a1180d62826b0901"></script></body>
+</body>
 </html>
