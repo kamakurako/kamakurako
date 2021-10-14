@@ -1,1 +1,659 @@
 
+
+<!DOCTYPE html>
+
+<!-----
+twilight theme by raine (@sakura)
+
+please dont remove the credit :flushed: but feel free to edit/add as much as you like :)
+let me know if there are any bugs or if you need help!
+
+base code by animecharacter.tumblr.com
+----->
+
+<script type="text/javascript">
+// <![CDATA[
+var bgcolour="#101010"; // background colour
+var fgcolour="#330000"; // foreground colour
+var speed=20; // speed of bubbling, lower is faster
+var shades=15; // number of shades of bubble
+
+/****************************
+*    Bubbling Text Effect   *
+*(c)2003-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var bubbcol=new Array();
+var bubbshd;
+var bubbler, bubbtxt;
+var bubbchr=new Array();
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(bubbagump);
+
+function bubbagump() { if (document.getElementById) {
+  var i, fg, bg, col;
+  for (bubbler=0; bubbler<=shades; bubbler++) {
+    col="#";
+    for (i=1; i<6; i+=2) {
+      bg=parseInt(bgcolour.substring(i,i+2),16);
+	  fg=parseInt(fgcolour.substring(i,i+2),16);
+      col+=dechex(bg+(fg-bg)*(bubbler/shades));
+    }
+    bubbcol[bubbler+1]=col;
+	if (bubbler==Math.floor(shades/2)) bubbshd=col;
+  }
+  bubbler=document.getElementById("bubble");
+  bubbtxt=bubbler.firstChild.nodeValue;
+  while (bubbler.childNodes.length) bubbler.removeChild(bubbler.childNodes[0]);
+  for (i=0; i<bubbtxt.length; i++) {
+    fg=document.createElement("span");
+    fg.setAttribute("id", "bubb"+i);
+	fg.style.textShadow=bubbshd+" 0px 0px 2px";
+    fg.appendChild(document.createTextNode(bubbtxt.charAt(i)));
+    bubbler.appendChild(fg);
+  }
+  bubbler=setInterval("bubbling()", speed);
+}}
+
+function dechex(dec) {
+  dec=Math.floor(dec);
+  return ((dec<16)?'0':'')+dec.toString(16);
+}
+
+function bubbling() {
+  var i, bubby;
+  for (i=0; i<bubbtxt.length; i++) {
+    bubby=document.getElementById("bubb"+i);
+    if (bubbchr[i]) {
+      bubby.style.color=bubbcol[bubbchr[i]];
+      bubbchr[i]=(bubbchr[i]+1)%bubbcol.length;
+    }
+    else if (Math.random()<7.5/(shades*bubbtxt.length)) bubbchr[i]=1;
+  }
+}
+// ]]>
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="https://static.tumblr.com/rtrqcib/VGGnlh8rf/jquery.style-my-tooltips.min.js"></script><script>(function($){$(document).ready(function(){$("a[title]").style_my_tooltips({tip_follows_cursor:true,tip_delay_time:0,tip_fade_speed:0,attribute:"title"});});})(jQuery);</script>
+
+
+ <style>
+    
+<title>*</title>
+        
+<link rel="shortcut icon" href="https://assets.tumblr.com/images/x.gif?v=1">
+<link rel="alternate" type="application/rss+xml" href="https://sakicoding.tumblr.com/rss">
+<link rel="stylesheet" href="https://static.tumblr.com/qxrkgx6/RWPmgn2qa/normalize.min.css">
+
+<script src="https://static.tumblr.com/qxrkgx6/LuRmgn2rm/modernizr-2.6.2.min.js"></script>
+        
+
+<meta name="image:favicon" content=""/>
+<meta name="image:icon" content=""/>
+<meta name="image:bg image" content=""/>
+<meta name="image:outer post" content=""/>
+<meta name="image:footer img" content=""/>
+<meta name="image:footer pixel" content=""/>
+<meta name="image:sidebar pixel" content=""/>
+<meta name="image:pixel 1" content="https://66.media.tumblr.com/6eb1861d100b6614473c81b38b5d8f82/tumblr_inline_mm0nwe06i31qz4rgp.gif">
+<meta name="image:pixel 2" content="https://66.media.tumblr.com/d156a8a1f9f4b2ad4928ca4b3a908336/tumblr_inline_mm0nwm3DUS1qz4rgp.gif">
+<meta name="image:pixel 3" content="https://66.media.tumblr.com/92198135c78a4d03302d7382ee5b33d1/tumblr_inline_mm0nwiFF8s1qz4rgp.gif">
+<meta name="image:pixel 4" content="https://66.media.tumblr.com/7f312e354f695d10b4c94c6d7b9d20b4/tumblr_inline_mm0nwqffRY1qz4rgp.gif">
+
+<meta name="text:sidebar pixel size" content="">
+<meta name="text:sidebar pixel y axis" content="-10">
+<meta name="text:sidebar pixel x axis" content="600">
+
+<meta name="color:bg" content="gray"/>
+<meta name="color:post bg" content="white"/>
+<meta name="color:outer post" content=""/>
+<meta name="color:sparkles" content="pink"/>
+<meta name="color:track" content="black"/>
+<meta name="color:thumb" content="white"/>
+<meta name="color:text" content="black"/>
+<meta name="color:text glow" content="black"/>
+<meta name="color:link" content="black"/>
+<meta name="color:link glow" content="blue"/>
+<meta name="color:link hover" content="blue"/>
+<meta name="color:description txt" content="black"/>
+<meta name="color:border" content="black"/>
+<meta name="color:footer color" content="gray"/>
+<meta name="color:tooltip" content="white"/>
+<meta name="color:tooltip text" content="black"/>
+
+<meta name="text:redirect" content="">
+<meta name="text:font size" content="18"/>
+<meta name="text:outer post size" content=""/>
+<meta name="text:custom desc" content="hewwo"/>
+<meta name="text:custom desc2" content="hewwo"/>
+<meta name="text:custom desc3" content="hewwo"/>
+
+<meta name="text:border" content="2">
+<meta name="text:link 1" content="I"/>
+<meta name="text:link 1 url" content=""/>
+<meta name="text:link 2" content="III"/>
+<meta name="text:link 2 url" content=""/>
+<meta name="text:link 3" content="II"/>
+<meta name="text:link 3 url" content=""/>
+<meta name="text:link 4" content="IV"/>
+<meta name="text:link 4 url" content=""/>
+
+<meta name="if:redirect" content="0">
+<meta name="if:captions" content="1">
+<meta name="if:rainbow hover" content="0">
+<meta name="if:sparkles" content="1">
+<meta name="if:transparent desc" content="1"/>
+<meta name="if:desc" content="1"/>
+<meta name="if:desc2" content="1"/>
+<meta name="if:desc3" content="1"/>
+<meta name="if:pixel links" content="1"/>
+<meta name="if:bg cover" content="0"/>
+<meta name="if:outer post" content="0"/>
+<meta name="if:outer post cover" content="0"/>
+<meta name="if:footer cover" content="0"/>
+<meta name="if:circle icon" content="0"/>
+<meta name="if:round" content="1"/>
+
+<meta name="select:font" content="arial">
+<meta name="select:font" content="verdana">
+<meta name="select:font" content="courier">
+<meta name="select:font" content="georgia">
+<meta name="select:font" content="times new roman">
+<meta name="select:font" content="lora">
+<meta name="select:font" content="short stack">
+<meta name="select:font" content="comic sans ms">
+
+<meta name="select:border" content="solid"/>
+<meta name="select:border" content="dashed"/>
+<meta name="select:border" content="dotted"/>
+<meta name="select:border" content="double"/>
+<meta name="select:border" content="none"/>
+        
+<style type="text/css">
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+ 
+::-webkit-scrollbar-track {
+  background: black;
+}
+ 
+ 
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius:0px;
+}
+
+
+/*
+general text styles, fonts and colours
+*/
+
+body {
+margin:0px;
+background:#101010;
+background-image:url('https://assets.tumblr.com/images/x.gif?v=1');
+background-repeat:repeat;
+background-size:;
+background-attachment:fixed;
+color:#363636;
+font-family:times new roman;
+font-size:24px;
+text-shadow: 0 0 1px black;
+line-height:130%;
+}
+
+b, bold, strong {
+margin:0px;
+background:#101010;
+background-size:;
+background-attachment:fixed;
+color:#6b0000;
+font-family:times new roman;
+font-size:24px;
+text-shadow: 0 0 1px black;
+line-height:130%;
+}
+
+p{
+margin:0 0 10px 0;
+padding:0;
+}
+
+pre { 
+white-space: pre-wrap;
+white-space: -moz-pre-wrap;
+white-space: -pre-wrap;
+white-space: -o-pre-wrap;
+word-wrap: break-word;
+}
+
+a{
+color:#6b0000;
+text-decoration:none;
+text-shadow: 0 0 3px #490000;
+}
+
+a:hover{
+color:#0c0c0c;
+text-shadow: 0 0 3px #490000;
+}
+
+li{
+margin-left:-15px;
+}
+
+/*
+containers etc
+*/
+#wrapper{
+width:600px;
+margin:50px auto;
+}
+
+#desc{
+font-size: 50px;
+color:#d5c8cf;
+border:;
+margin-top: -70px;
+margin-left: 230px;
+width:560px;
+
+border-radius:5px;
+
+}
+
+#desc2{
+font-size: 25px;
+color: #2F2F2F;
+text-shadow: -1px 0 #D5C8CF, 0 1px #D5C8CF, 1px 0 #D5C8CF, 0 -1px #D5C8CF;
+margin-left: 50px;
+margin-top: 8px;
+margin-left: 50px;
+width:230px;
+
+border-radius:5px;
+line-height: 75%;
+
+}
+
+#desc3{
+font-size: 25px;
+color: #2F2F2F;
+text-shadow: -1px 0 #D5C8CF, 0 1px #D5C8CF, 1px 0 #D5C8CF, 0 -1px #D5C8CF;
+margin-left: 285px;
+margin-top: -120px;
+width:230px;
+
+border-radius:5px;
+line-height: 75%;
+
+z-index:7;
+}
+
+#desc a, #desc2 a{
+color:#d5c8cf;
+}
+
+.sidebarpixel img{
+height:90px;
+position:fixed;
+margin-top:-55px;
+margin-left:180px;
+z-index:7;
+}
+
+#sidebar{
+width:160px;
+padding:7px;
+text-align:left;
+position:fixed;
+margin-left:56px;
+margin-top:30px;
+z-index:100;
+}
+
+#sidebar img{
+max-width:480px;
+margin-top: -100px;
+ 
+ 
+ z-index:100;
+}
+
+#content{
+width:700px;
+margin-left:200px;
+margin-top:340px;
+overflow:hidden;
+}
+
+.post{
+width:500px;
+
+margin: 0 auto;
+overflow:hidden;
+padding:7px;
+border:1px solid #101010;
+
+border-radius:5px;
+
+background-color:#101010;
+z-index:100000000000;
+}
+
+   
+#postwrap {
+
+width:375px;
+margin:0 0 50px 0;
+background-image:url('https://64.media.tumblr.com/8e8aaa3f4911b7cc96611cfa4841fc62/b972f9b0d330f1cc-30/s2048x3072/c5fd69f3ca7a52399a61db84a0282ef7b623136b.gif');
+background-size:px;
+
+border:1px solid #101010;
+background-color:;
+
+border-radius:5px;
+
+background-repeat:repeat;
+padding:10px;
+
+z-index:1000;
+}
+    
+#pixel img {
+width: auto;
+text-align:center;
+}
+
+.post img{
+max-width:100%;
+}
+
+#nav{
+margin:20px 0 0 0 0;
+margin-left:200px;
+font-size:25px;
+font-weight:bold;
+}
+
+
+#link3{
+max-height:70px;
+padding-top:5px;
+padding-bottom:5px;
+margin-left:500px;
+margin-top:90px;
+position:absolute;
+overflow:hidden;
+width:70px;
+text-align:center;
+background: transparent;
+
+border-radius:25px;
+
+z-index:7;
+}
+
+/* 
+content in the body of the posts - quotes, asks, etc
+"media" contains photos, photosets, videos, audio posts
+*/
+.media{
+margin:0 0 10px 0;
+}
+
+    .media img{
+        width:100%;
+}
+
+.title{
+font-weight:normal;
+font-size:30px;
+margin:0 0 10px 0;
+}
+
+.tags {
+   max-height:0px;
+   line-height:130%;
+   text-align:center;
+   opacity:0;
+    -webkit-transition: all 0.7s ease;
+   transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;}
+ 
+.post:hover .tags{
+   opacity:1;
+   max-height:300px;
+   -webkit-transition: all 0.7s ease;
+   transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;}
+
+
+.quote{
+font-weight:normal;
+font-size:16px;
+font-style:italic;
+margin:0 0 10px 0;
+}
+
+.question{
+margin-bottom:10px;
+background-color:#d4d4d4;
+padding:5px;
+}
+
+blockquote{
+margin:0 0 10px 10px; 
+padding:0 0 0 10px;
+border-left:solid 1px #000;
+}
+
+/*
+post footers - date, tags, via and source
+*/
+
+.post .footer{
+margin:0;
+background-color:#a0a0a0;
+background-image:url(https://assets.tumblr.com/images/x.gif?v=1);
+background-size:;
+padding:2px;
+text-align:center;
+}
+
+/*
+post notes
+*/
+ol.notes{
+list-style-type:none;
+padding:0;
+margin:0;
+}
+
+ol.notes li.note img{
+width:16px;
+height:16px;
+}
+
+ol.notes li.note{
+margin:0px;
+}
+
+.tooltip{
+display:inline;
+position:relative;
+}
+ 
+#s-m-t-tooltip{
+max-width:300px;
+padding:8px;
+margin:20px 7px 7px 20px;
+background-image:url('https://static.tumblr.com/pocqe8q/cqYr0yhxe/dark_water.gif');
+border:1px solid #101010;
+text-align:center;
+
+border-radius:5px;
+
+color:#cbcbcb;
+font-size: 20px;
+letter-spacing: -1px;
+line-height:170%;
+z-index:99999999999999999999;
+}
+
+</style>
+<link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=sakicoding%26postID=" /><link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=sakicoding&postID=" /><script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=a8fadfa499d8cb7c3f8eefdf0b1adfdd"></script><link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"><!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="Tumblr" /><meta property="og:title" content="Tumblr" /><meta property="og:description" content="𝔄𝔤𝔢:&nbsp; &nbsp;26
+𝔑𝔞𝔱𝔦𝔬𝔫𝔞𝔩𝔦𝔱𝔶:&nbsp; &nbsp;𝔄𝔲𝔰𝔱𝔯𝔞𝔩𝔦𝔞𝔫
+𝔓𝔢𝔯𝔰𝔬𝔫𝔞𝔩𝔦𝔱𝔶:&nbsp; &nbsp;𝔅𝔢𝔱𝔱𝔢𝔯 𝔱𝔥𝔞𝔫 𝔶𝔬𝔲 𝔦𝔫 𝔢𝔳𝔢𝔯𝔶 𝔴𝔞𝔶
+𝔖𝔱𝔞𝔱𝔲𝔰:&nbsp; &nbsp;𝔗𝔞𝔨𝔢𝔫 𝔟𝔶 𝔱𝔥𝔢 𝔅𝔢𝔰𝔱" /><meta property="og:url" content="https://sakicoding.tumblr.com/bio." /><meta property="og:type" content="article" /><meta property="og:determiner" content="a" /><meta property="og:image" content="https://64.media.tumblr.com/d81e826b02111eba4e7f98eeaf49d683/tumblr_inline_r0yhky8O9L1xave0e_500.gifv" /><meta property="og:image:secure_url" content="https://64.media.tumblr.com/d81e826b02111eba4e7f98eeaf49d683/tumblr_inline_r0yhky8O9L1xave0e_500.gifv" /><meta property="og:image:type" content="image/webp" /><meta property="og:image:width" content="500" /><meta property="og:image:height" content="281" /><meta property="og:image" content="https://44.media.tumblr.com/d81e826b02111eba4e7f98eeaf49d683/tumblr_inline_r0yhky8O9L1xave0e_500.gif" /><meta property="og:image:secure_url" content="https://44.media.tumblr.com/d81e826b02111eba4e7f98eeaf49d683/tumblr_inline_r0yhky8O9L1xave0e_500.gif" /><meta property="og:image:type" content="image/webp" /><meta property="og:image:width" content="500" /><meta property="og:image:height" content="281" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;postID=" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;postID=" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:site" content="tumblr" /><meta name="twitter:card" content="summary" /><meta name="twitter:description" content="sakicoding" /><meta name="twitter:title" content="sakicoding" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=sakicoding&amp;referrer=twitter-cards" /><link rel="canonical" href="https://sakicoding.tumblr.com/bio." /></head>
+
+<body>
+
+<script language=JavaScript>
+
+<!--
+
+//Disable right click script III- By Renigade (renigade@mediaone.net)
+
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="";
+
+///////////////////////////////////
+
+function clickIE() {if (document.all) {(message);return false;}}
+
+function clickNS(e) {if 
+
+(document.layers||(document.getElementById&&!document.all)) {
+
+if (e.which==2||e.which==3) {(message);return false;}}}
+
+if (document.layers) 
+
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+
+// --> 
+
+</script>
+
+
+
+<div id="wrapper">
+
+
+<div class="sidebarpixel"><a href="https://xat.me/1538406738" title="Married with Ashlyn"><img src="https://64.media.tumblr.com/19bae7da147c10dded0f6516cf0b34db/b972f9b0d330f1cc-17/s2048x3072/00e9e01a7bdb39458b4e280ee1b4394ce89cc8e2.gif"></a></div><div id="sidebar">
+<img src="https://assets.tumblr.com/images/x.gif?v=1"></a>
+<div id="desc"><span id="bubble">𝕴'𝖒 𝖇𝖊𝖙𝖙𝖊𝖗 𝖙𝖍𝖆𝖓 𝖞𝖔𝖚.</span></div>
+</div>
+
+
+
+<div id="content">
+
+
+<div id="postwrap">
+<article class="post">
+
+
+
+
+<p align="center"><img src="https://64.media.tumblr.com/d81e826b02111eba4e7f98eeaf49d683/tumblr_inline_r0yhky8O9L1xave0e_500.gif"></p><p align="center"><strong><big>&#120068;&#120100;&#120098;:</big></strong>&nbsp; &nbsp;26<strong><br><big>&#120081;&#120094;&#120113;&#120102;&#120108;&#120107;&#120094;&#120105;&#120102;&#120113;&#120118;:</big></strong>&nbsp; &nbsp;&#120068;&#120114;&#120112;&#120113;&#120111;&#120094;&#120105;&#120102;&#120094;&#120107;<strong><br><big>&#120083;&#120098;&#120111;&#120112;&#120108;&#120107;&#120094;&#120105;&#120102;&#120113;&#120118;:</big></strong>&nbsp; &nbsp;&#120069;&#120098;&#120113;&#120113;&#120098;&#120111; &#120113;&#120101;&#120094;&#120107; &#120118;&#120108;&#120114; &#120102;&#120107; &#120098;&#120115;&#120098;&#120111;&#120118; &#120116;&#120094;&#120118;<strong><br><big>&#120086;&#120113;&#120094;&#120113;&#120114;&#120112;:</big></strong>&nbsp; &nbsp;&#120087;&#120094;&#120104;&#120098;&#120107; &#120095;&#120118; &#120113;&#120101;&#120098; &#120069;&#120098;&#120112;&#120113;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+                
+
+
+
+
+
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="https://static.tumblr.com/qxrkgx6/q6kmgn2w2/jquery-1.8.3.min.js"><\/script>')</script>
+
+<img src='https://static.tumblr.com/pocqe8q/ij6r0ygbv/red_lilies.png' style='position:fixed;top:200px;left:350px;z-index:-999'/>
+    
+<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://assets.tumblr.com/analytics.html?_v=9f5febfd57a8a649c598d888f2d9e062#" +
+                              "https://sakicoding.tumblr.com";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/bio.?route=custom_page'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+    })();
+</script></body>
+    <BODY onselectstart="return false;" ondragstart="return false;">
+</html>
+<p style="position: fixed; left: 2px; bottom: -10px; font-size:14px;"><a title="original code by sakura@tumblr, modified by mirai@xat for scream@xat."><img src="https://static.tumblr.com/pocqe8q/H8pr0yj6y/sakurabonsai.png">️</a>
